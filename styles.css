@@ -17,21 +17,48 @@ section {
 }
 
 h1 {
-    font-size: 24vw;
+    font-size: 31vw;
     grid-area: novaheader;
     color: white;
     padding: 0;
     margin: 0;
+
+    text-align: center;
 }
 
 h3 {
     font-size: 2rem;
     grid-area: novamsg;
-    text-align: left;
+    text-align: center;
     color: white;
 }
 
-@media screen and (min-width: 1024px) {
+input {
+    padding: 1rem 1.5rem;
+    color: white;
+    grid-area: enteremail;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+button {
+    background-color: blue;
+    padding: 1rem 1.5rem;
+    color: white;
+    grid-area: submitbutton;
+    border-color: blue;
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+.form {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
     section {
         display: grid;
         grid-template-areas:
@@ -47,6 +74,7 @@ h3 {
         color: white;
         padding: 0;
         margin: 0;
+        text-align: left;
     }
 
     h3 {
