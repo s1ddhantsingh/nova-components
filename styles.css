@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: black;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        'novaheader novaheader novaheader'
+        'novamsg novamsg novamsg'
+        'enteremail enteremail submitbutton';
+    gap: 10px;
+}
+
+h1 {
+    font-size: 15vw;
+    grid-area: novaheader;
+
+    text-align: left;
+
+    color: white;
+}
+
+h3 {
+    font-size: 10vw;
+
+    grid-area: novamsg;
+
+    text-align: left;
+    color: white;
+}
