@@ -9,6 +9,7 @@
 
 section {
     display: grid; 
+    justify-content: center;
     grid-template-areas:
         'novaheader novaheader novaheader'
         'novamsg novamsg novamsg'
@@ -39,17 +40,38 @@ h3 {
 
 input {
     padding: 1rem 1.5rem;
-    color: white;
     grid-area: enteremail;
 
+    color: white;
+
     border-radius: 10px;
+    border-color: #fff;
 
     font-size: 1rem;
 }
 
+/* to change placeholder text color */
+::placeholder {
+    color: #0000ffa4
+}
+
+:-ms-input-placeholder {
+    color: #0000ffa4
+}
+
+::-ms-input-placeholder {
+    color: #0000ffa4
+}
+
+/* auto disappear placeholder text */
+input:focus::placeholder {
+    color: transparent;
+  }
+  
+
 button {
     background-color: blue;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.7rem;
     color: white;
     grid-area: submitbutton;
     border-color: blue;
@@ -59,7 +81,7 @@ button {
 }
 
 .form {
-    width: 100%;
+    width: 105%;
 }
 
 canvas {
@@ -71,6 +93,12 @@ hr {
     height: 2px;
     background-color: #ccc;
     border: none;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    color: #0000ff;
 }
 
 @media screen and (min-width: 600px) {
@@ -93,13 +121,13 @@ hr {
         color: white;
         padding: 0;
         margin: 0;
-        text-align: left;
+        /* text-align: left; */
     }
 
     h3 {
         font-size: 2rem;
         grid-area: novamsg;
-        text-align: left;
+        /* text-align: left; */
         color: white;
     }
 }
