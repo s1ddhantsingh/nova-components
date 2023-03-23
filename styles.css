@@ -8,12 +8,16 @@
 }
 
 section {
-    display: grid;
+    display: grid; 
     grid-template-areas:
         'novaheader novaheader novaheader'
         'novamsg novamsg novamsg'
         'enteremail enteremail submitbutton';
     gap: 10px;
+}
+
+.add-margin-top {
+    margin-top:17vh;
 }
 
 h1 {
@@ -58,7 +62,22 @@ button {
     width: 100%;
 }
 
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+}
+
 @media screen and (min-width: 600px) {
+    .add-margin-top {
+        margin-top:100px;
+    }
+
     section {
         display: grid;
         grid-template-areas:
@@ -83,10 +102,4 @@ button {
         text-align: left;
         color: white;
     }
-}
-
-hr {
-    height: 1px;
-    background-color: #ccc;
-    border: none;
 }
