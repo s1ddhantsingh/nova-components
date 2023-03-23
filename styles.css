@@ -52,15 +52,15 @@ input {
 
 /* to change placeholder text color */
 ::placeholder {
-    color: #0000ffa4
+    color: #fff
 }
 
 :-ms-input-placeholder {
-    color: #0000ffa4
+    color: #fff
 }
 
 ::-ms-input-placeholder {
-    color: #0000ffa4
+    color: #fff
 }
 
 /* auto disappear placeholder text */
@@ -102,8 +102,13 @@ div {
 }
 
 footer {
-    display: grid;
+    margin: 100%;
+    padding: 100%;
 
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    
     grid-template-areas:'app app privacy';
     grid-gap: 10px;
     
@@ -121,11 +126,16 @@ img {
     margin: 0%;
 }
 
+a {
+    padding: 0%;
+    margin: 0%;
+}
+
 h4 {
     grid-area: privacy;
-    text-align: left;
+    text-align: right;
 
-    color: #0000ff;
+    color: #fff;
 }
 
 @media screen and (min-width: 600px) {
