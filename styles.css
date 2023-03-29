@@ -102,6 +102,12 @@ div {
     color: #0000ff;
 }
 
+form {
+    margin: 0;
+    padding: 0;
+    color: #0000ff;
+}
+
 footer {
     margin: 100%;
     padding: 100%;

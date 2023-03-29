@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="novafavicon.png">
     <!-- <script type="text/javascript" src="app.js"></script> -->
     <title>nova</title>
 </head>
@@ -18,18 +19,45 @@
     <hr>
     <!-- join buttons (enter email, submit button) -->
     <section>
-        <div class="form">
+        <form class="form" onsubmit="sendemail(); reset();">
             <input type="email" name="" id="" placeholder="enter your email.">
             <button>join waitlist</button>
-        </div>
+        </form>
     </section>    
 
     <!-- https://www.vectorlogo.zone/logos/linkedin/linkedin-tile.svg -->
     <footer>
         <a href="https://www.linkedin.com/company/nova-optimization/"><img src="linkedin.png" width="35" height="35" alt="linkedin"></a>
-        <a href="#"><img src="twitter.png" width="35" height="35" alt="twitter"></a>
+        <a href="https://twitter.com/OptimizeNOVA"><img src="twitter.png" width="35" height="35" alt="twitter"></a>
         <!-- <a href="#"><h4>no cookies used.</h4></a> -->
         <h4>since 2023</h4>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendemail() {
+            console.log('starting')
+            setTimeout(5000)
+            try {
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "joinnovagetemailspambswoo@gmail.com",
+                    Password : "rqesnmufpcmevqtm",
+                    To : 'joinnovagetemailspambswoo@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "NOVA EMAIL SUBMISSION",
+                    Body: "wow.",
+                    // Body : "Email: " + document.getElementById("email").value,
+                }).then(
+                    message => alert(message)
+                );
+            } catch(err) {
+                console.log('nigga what')
+                console.log(err)
+            }
+            console.log('done')
+            setTimeout(5000)
+        }
+    </script>
 </body>
+
 </html>
