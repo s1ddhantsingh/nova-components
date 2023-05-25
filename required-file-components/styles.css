@@ -82,7 +82,8 @@ button {
 }
 
 .form {
-    width: 105%;
+    margin: 0px;
+    padding: 0px;
 }
 
 canvas {

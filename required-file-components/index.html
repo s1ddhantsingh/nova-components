@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="novafavicon.png">
+    <!-- <script type="module" src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js"></script>
+    <script type="module">
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.3/firebase-auth.js'
+        console.log('reached 1')
+        // Your web app's Firebase configuration
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnYc48JfdD4lPFvqms4eU9iS8CWwcyPuI",
+            authDomain: "nova-firebase-waitlist-form.firebaseapp.com",
+            databaseURL: "https://nova-firebase-waitlist-form-default-rtdb.firebaseio.com",
+            projectId: "nova-firebase-waitlist-form",
+            storageBucket: "nova-firebase-waitlist-form.appspot.com",
+            messagingSenderId: "275669175755",
+            appId: "1:275669175755:web:4d7b497beacf3e2e3f7a4e"
+        };
+
+        // Initialize Firebase Application
+        const app = initializeApp(firebaseConfig);
+        console.log(app)
+
+        console.log('reached 2')
+        // const auth = getAuth();
+        console.log('reached 3')
+
+        var fullName = document.getElementById("full_name");
+        var email = document.getElementById("email");
+
+        console.log(fullName.value, email.value)
+
+        var password = `${Math.random()*100}`
+
+        const register = () => {
+            e.preventDefault();
+
+            if(fullName.value == "" || email.value =="" || password.value ==""){
+                alert("All Field Are Required")
+            }
+
+            var obj = {
+                firstName: fullName.value,
+                email: email.value,
+                password: password,
+            };
+
+            createUserWithEmailAndPassword(auth, obj.email, obj.password)
+            .then(function(success){
+                //   window.location.replace('HTML/login.html')
+                // console.log(success.user.uid)
+                alert("signup successfully")
+            })
+            .catch(function(err){
+                alert("Error in " + err)
+            });
+            
+            console.log('done nigga')
+            console.log(obj);
+        };
+    </script> -->
+    <!-- load script after firebase is done firebasing -->
+    <!-- <script type="mod4ule" src="./index.js"></script> -->
+    <title>nova></title>
+</head>
+<body>
+    <!-- nova, website frontpage -->
+    <section class="add-margin-top">
+        <h1><strong>nova<span style="color: #0000ff">></span></strong></h1>
+        <h3>revolutionizing smart sourcing, for 
+            <span style="color: #0000ff">small scale manufacturers</span> this time.</h3>
+    </section>
+    <hr>
+    <!-- join buttons (enter email, submit button) -->
+    <section>
+        <!-- <form action="mailto:singhsiddhantakshat@gmail.com, archit.thanikella@gmail.com, paulrejijoseph@gmail.com" method="post" enctype="text/plain"> -->
+        <!-- FINALLLY BROTHER WOOOOOOOOOOOOO  -->
+        <form action="https://getform.io/f/40df3db1-666f-44a3-855f-dfac94201d06" method="POST">
+            <input type="name" name="name" id="full_name" placeholder="enter your full name." required>
+            <input type="email" name="email" id="email" placeholder="enter your email." required>
+            <input type="questions" name="questions" id="email" placeholder="questions? ask away." required>
+            <button type="submit" value="submit">join waitlist</button>     
+        </form>
+    </section>    
+    <footer>
+        <a href="https://www.linkedin.com/company/nova-optimization/"><img src="linkedin.png" width="35" height="35" alt="linkedin"></a>
+        <a href="https://twitter.com/OptimizeNOVA"><img src="twitter.png" width="35" height="35" alt="twitter"></a>
+        <h4>© 2023 nova></h4>
+    </footer>
+</body>
+</html>
